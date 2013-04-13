@@ -5,6 +5,7 @@ class MMSBot
 
   def initialize
   	@users = {} 
+  	load_config_file
   	load_default_users
   end
 
@@ -38,13 +39,29 @@ class MMSBot
      "#{u.number}@#{u.carrier}"
   end
 
+  def load_config_file
+  	@config_file = YAML.load(File.open(DEFAULT_CONFIG_FILE))
+  end
+
   def load_default_users
-  	if File.exists?(DEFAULT_USER_FILE)
-	   user_hash = YAML.load(File.open(DEFAULT_CONFIG_FILE))['users']
+  	if @config_file['users']
+	   user_hash = @config_file['users']
 	   user_hash.each_pair do |nick,deets|
 	     add_user(nick,deets['number'],deets['carrier'])
 	   end
 	end
+  end
+
+  def nick
+    @config_file['nick']
+  end
+
+  def channels
+    @config_file['channels']
+  end
+
+  def server
+  	@config_file['server']
   end
 
 end
