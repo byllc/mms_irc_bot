@@ -1,5 +1,7 @@
 ## A IRC Bot to forward messages to MMS
-
+  This is a very simple wrapper around Pony and Cinch. As it was just quickly abstracted from a one off script it still 
+  needs some tests but the base functionality works. 
+  
 # Why?
   Because as a team lead I am not always in front of my computer but we use IRC as our centralized method of communication. 
   This lets me know that someone is trying to ping me. 
