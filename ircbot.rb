@@ -8,9 +8,9 @@ bot = Cinch::Bot.new do
   mmsb = MMSBot.new
   
   configure do |c|
-    c.server = "irc.freenode.org"
-    c.nick = "mms_forwarder"
-    c.channels = ["#ams_dev @c@demic","#asp_watercooler","#overnothing"]
+    c.server   = mmsb.server #"irc.freenode.org"
+    c.nick     = mmsb.nick   #"mms_forwarder"
+    c.channels = mmsb.channels
   end
   
   #whenever my name is in the channel I want to get a text message with the body of the text message

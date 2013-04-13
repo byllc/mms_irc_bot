@@ -1,7 +1,7 @@
 class MMSBot 
 
   MMSDetails = Struct.new(:nick,:number,:carrier,:active)
-  DEFAULT_USER_FILE = "./config/users.yml"
+  DEFAULT_CONFIG_FILE = "./config/config.yml"
 
   def initialize
   	@users = {} 
@@ -40,7 +40,7 @@ class MMSBot
 
   def load_default_users
   	if File.exists?(DEFAULT_USER_FILE)
-	   user_hash = YAML.load(File.open(DEFAULT_USER_FILE))['users']
+	   user_hash = YAML.load(File.open(DEFAULT_CONFIG_FILE))['users']
 	   user_hash.each_pair do |nick,deets|
 	     add_user(nick,deets['number'],deets['carrier'])
 	   end

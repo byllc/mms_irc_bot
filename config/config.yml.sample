@@ -5,3 +5,8 @@ users:
   nickname2:
     number: 777777777
     carrier txt.att.net
+
+ channels:
+  - "#channel1 password"
+  - "#channel2"
+  - "#channel3"
