@@ -1,3 +1,4 @@
 config/smtp.yml
 config/config.yml
 Procfile
+.DS_Store
