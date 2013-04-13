@@ -26,3 +26,5 @@
 
   I will gemify if anyone else thinks they would find this useful but I didn't think there was enough here to warrant it
   
+  This was really just a one off script that I started cleaning up, I need to add some tests 
+  
